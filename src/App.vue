@@ -7,10 +7,10 @@ import Footer from '@/components/Footer.vue'
 <template>
   <div class="flex flex-col min-h-[100dvh]">
     <Header></Header>
-    <main class="flex-1">
+    <main class="flex-1 mx-auto w-full  max-w-screen-xl">
       <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
-          <div class="space-y-4">
+          <div class="space-y-4 mt-[15%] flex-1">
             <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               分享你的瞬间给全世界
             </h1>
@@ -18,7 +18,7 @@ import Footer from '@/components/Footer.vue'
               我们的图片托管平台让上传、分享和发现惊艳的视觉效果变得简单。今天就开始吧！
             </p>
             <button
-              class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8">
+              class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 hover:shadow-lg h-11 rounded-md px-8">
               上传图片
             </button>
           </div>
@@ -155,11 +155,11 @@ import Footer from '@/components/Footer.vue'
             </p>
             <div class="flex flex-col gap-2 min-[400px]:flex-row">
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-                查看个人资料
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 hover:shadow-lg h-10 px-4 py-2">
+                查看资料
               </button>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-400 bg-white text-black hover:bg-gray-200 hover:shadow-lg h-10 px-4 py-2">
                 管理图片
               </button>
             </div>
