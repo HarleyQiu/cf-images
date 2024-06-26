@@ -39,7 +39,7 @@
         aria-expanded="false"
         data-state="closed"
       >
-        <img class="aspect-square h-full w-full" src="../../public/placeholder-user.jpg" alt="" />
+        <img class="aspect-square h-full w-full" src="../assets/placeholder-user.jpg" alt="" />
       </span>
     </nav>
   </header>

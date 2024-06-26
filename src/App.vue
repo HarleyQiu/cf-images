@@ -23,7 +23,7 @@ import Footer from '@/components/Footer.vue'
             </button>
           </div>
           <img
-            src="../public/placeholder.svg"
+            src="./assets/placeholder.svg"
             width="600"
             height="600"
             alt="Hero"
@@ -81,56 +81,56 @@ import Footer from '@/components/Footer.vue'
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
               class="aspect-square object-cover rounded-lg"
             />
             <img
-              src="../public/placeholder.svg"
+              src="./assets/placeholder.svg"
               width="300"
               height="300"
               alt="Image"
@@ -142,7 +142,7 @@ import Footer from '@/components/Footer.vue'
       <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
           <img
-            src="../public/placeholder.svg"
+            src="./assets/placeholder.svg"
             width="600"
             height="600"
             alt="User Profile"
