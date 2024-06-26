@@ -7,7 +7,7 @@ import Footer from '@/components/Footer.vue'
 <template>
   <div class="flex flex-col min-h-[100dvh]">
     <Header></Header>
-    <main class="flex-1 mx-auto w-full  max-w-screen-xl">
+    <main class="flex-1 mx-auto w-full max-w-screen-xl">
       <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
           <div class="space-y-4 mt-[15%] flex-1">
