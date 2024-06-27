@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -22,12 +22,15 @@
       <span class="sr-only">图片托管</span>
     </a>
     <nav class="flex items-center gap-4 sm:gap-6">
-      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+      <router-link to="/" class="text-sm font-medium hover:underline underline-offset-4">
+        首页
+      </router-link>
+      <router-link to="#" class="text-sm font-medium hover:underline underline-offset-4">
         探索
-      </a>
-      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+      </router-link>
+      <router-link to="/upload" class="text-sm font-medium hover:underline underline-offset-4" href="#">
         上传
-      </a>
+      </router-link>
       <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
         个人资料
       </a>
