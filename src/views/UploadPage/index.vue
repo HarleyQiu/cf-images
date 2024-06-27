@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div class="flex h-screen w-full flex-col items-center justify-center bg-background px-4 md:px-6">
-    <div class="mx-auto flex max-w-2xl flex-col items-center justify-center space-y-8">
+  <div class="flex min-h-screen w-full flex-col items-center justify-center bg-background px-4 pt-4 md:px-6 md:pt-0">
+    <div class="mx-auto flex w-full max-w-2xl flex-col items-center justify-center space-y-8">
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
-        <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">上传您的图片</h1>
-        <p class="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+        <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">上传您的图片</h1>
+        <p class="max-w-[600px] text-muted-foreground text-center md:text-lg/relaxed">
           请拖放图片到此处，或从您的设备中选择文件。通过我们安全可靠的图片托管平台，提升您的在线形象。
         </p>
       </div>
@@ -29,15 +29,15 @@
           <polyline points="17 8 12 3 7 8"></polyline>
           <line x1="12" x2="12" y1="3" y2="15"></line>
         </svg>
-        <p class="text-lg font-medium text-primary">拖放文件或选择文件</p>
+        <p class="text-lg font-medium text-primary md:text-xl">拖放文件或选择文件</p>
       </div>
-      <div class="flex w-full flex-col items-center justify-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+      <div class="flex w-full flex-row items-center justify-center space-x-4">
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 hover:shadow-lg h-11 rounded-md px-8">
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 hover:shadow-lg h-10 rounded-md px-6 md:h-11 md:px-8">
           上传
         </button>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-white text-black hover:bg-gray-200 hover:shadow-lg h-11 rounded-md px-8">
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-white text-black hover:bg-gray-200 hover:shadow-lg h-10 rounded-md px-6 md:h-11 md:px-8">
           取消
         </button>
       </div>
