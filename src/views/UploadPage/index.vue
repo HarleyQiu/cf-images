@@ -7,12 +7,12 @@
     <div class="mx-auto flex w-full max-w-2xl flex-col items-center justify-center space-y-8">
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
         <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">上传您的图片</h1>
-        <p class="max-w-[600px] text-muted-foreground text-center md:text-lg/relaxed">
+        <p class="max-w-[600px] text-gray-500 text-center md:text-lg/relaxed">
           请拖放图片到此处，或从您的设备中选择文件。通过我们安全可靠的图片托管平台，提升您的在线形象。
         </p>
       </div>
       <div
-        class="flex w-full flex-col items-center justify-center space-y-4 rounded-xl border-2 border-dashed border-primary p-12 transition-all hover:border-primary/80 focus-within:border-primary/80">
+        class="flex w-full flex-col items-center justify-center space-y-4 rounded-xl border-2 border-dashed border-black p-12">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -23,13 +23,13 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="h-12 w-12 text-primary"
+          class="h-12 w-12"
         >
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="17 8 12 3 7 8"></polyline>
           <line x1="12" x2="12" y1="3" y2="15"></line>
         </svg>
-        <p class="text-lg font-medium text-primary md:text-xl">拖放文件或选择文件</p>
+        <p class="text-lg font-medium md:text-xl">拖放文件或选择文件</p>
       </div>
       <div class="flex w-full flex-row items-center justify-center space-x-4">
         <button
