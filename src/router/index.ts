@@ -14,6 +14,11 @@ const router = createRouter({
       component: () => import('@/views/UploadPage/index.vue')
     },
     {
+      path: '/text2img',
+      name: 'text2img',
+      component: () => import('@/views/TextToImage/index.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('@/views/AboutView.vue')

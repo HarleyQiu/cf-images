@@ -25,7 +25,7 @@ import { RouterLink } from 'vue-router'
       <router-link to="/" class="text-sm font-medium hover:underline underline-offset-4">
         首页
       </router-link>
-      <router-link to="#" class="text-sm font-medium hover:underline underline-offset-4">
+      <router-link to="/text2img" class="text-sm font-medium hover:underline underline-offset-4">
         探索
       </router-link>
       <router-link to="/upload" class="text-sm font-medium hover:underline underline-offset-4" href="#">
