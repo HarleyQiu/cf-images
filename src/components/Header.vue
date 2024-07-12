@@ -31,9 +31,9 @@ import { RouterLink } from 'vue-router'
       <router-link to="/upload" class="text-sm font-medium hover:underline underline-offset-4" href="#">
         上传
       </router-link>
-      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+      <router-link to="/profile" class="text-sm font-medium hover:underline underline-offset-4" href="#">
         个人资料
-      </a>
+      </router-link>
       <span
         class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"
         type="button"
@@ -42,7 +42,7 @@ import { RouterLink } from 'vue-router'
         aria-expanded="false"
         data-state="closed"
       >
-        <img class="aspect-square h-full w-full" src="../assets/placeholder-user.jpg" alt="" />
+        <img class="aspect-square h-full w-full" src="@/assets/placeholder-user.jpg" alt="" />
       </span>
     </nav>
   </header>
