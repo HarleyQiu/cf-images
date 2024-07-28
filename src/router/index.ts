@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('@/views/TextToImage/index.vue')
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/components/LoginPage/index.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('@/views/AboutView.vue')
