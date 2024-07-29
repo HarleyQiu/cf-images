@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
+
+const authStore = useAuthStore()
+
+const login = () => {
+  authStore.setToken('YOUR-USER-TOKEN')
+}
+const logout = () => {
+  authStore.clearToken()
+}
+
 </script>
 
 <template>
@@ -31,19 +42,37 @@ import { RouterLink } from 'vue-router'
       <router-link to="/upload" class="text-sm font-medium hover:underline underline-offset-4" href="#">
         上传
       </router-link>
-      <router-link to="/profile" class="text-sm font-medium hover:underline underline-offset-4" href="#">
-        个人资料
+      <router-link @click="login"
+                   to="/login"
+                   class="text-sm font-medium hover:underline underline-offset-4" href="#"
+                   v-if="!authStore.isAuthenticated">
+        登录
       </router-link>
-      <span
-        class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"
-        type="button"
-        id="radix-:r8:"
-        aria-haspopup="menu"
-        aria-expanded="false"
-        data-state="closed"
-      >
-        <img class="aspect-square h-full w-full" src="@/assets/placeholder-user.jpg" alt="" />
-      </span>
+      <div v-else
+           class="mx-auto max-w-sm rounded-lg shadow"
+           id="profile-dropdown">
+        <div class="group relative" id="dropdown-trigger">
+          <span class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9 cursor-pointer"
+                id="user-icon"
+                aria-haspopup="menu"
+                aria-expanded="false">
+            <img class="aspect-square h-full w-full" src="@/assets/placeholder-user.jpg" alt="User Icon" />
+          </span>
+          <ul
+            class="absolute right-0 z-10 hidden w-24 divide-y divide-gray-200 rounded-lg bg-white shadow-md group-hover:block transition-opacity duration-200">
+            <li class="p-2 hover:bg-gray-50 cursor-pointer hover:underline underline-offset-4">
+              <router-link to="/profile" class="text-sm font-medium">
+                个人资料
+              </router-link>
+            </li>
+            <li class="p-2 hover:bg-gray-50 cursor-pointer hover:underline underline-offset-4"
+                @click="logout">
+              <div class="text-sm font-medium">登 出</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </nav>
   </header>
 
