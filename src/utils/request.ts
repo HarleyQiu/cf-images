@@ -4,14 +4,16 @@ import type { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from 'a
 
 // 创建axios实例
 const service: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VUE_APP_BASE_API, // API的base_url
-  timeout: 5000 // 请求超时时间
+  baseURL: import.meta.env.VITE_APP_BASE_API, // API的base_url
+  timeout: 5000, // 请求超时时间
+  validateStatus: function(status: number) {
+    return status >= 200 && status < 500 // 所有200至499的状态码都认为是成功的
+  }
 })
 
 // 请求拦截器
 service.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
-    // 在发送请求之前做些什么
     // 例如添加token到请求头
     // if (store.getters.token) {
     //   config.headers['X-Token'] = store.getters.token
@@ -30,7 +32,7 @@ service.interceptors.response.use(
   (response: AxiosResponse) => {
     // 对响应数据做点什么
     const res = response.data
-    if (res.code !== 20000) {
+    if (response.status !== 200) {
       // 例如处理非20000的错误码
       // Message({
       //   message: res.message || 'Error',
@@ -45,7 +47,7 @@ service.interceptors.response.use(
       //     location.reload();
       //   });
       // }
-      return Promise.reject(new Error(res.message || 'Error'))
+      return Promise.reject(new Error(res.error || 'Error'))
     } else {
       return res
     }

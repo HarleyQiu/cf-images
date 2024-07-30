@@ -1,6 +1,6 @@
 // src/env.d.ts
 interface ImportMetaEnv {
-  readonly VUE_APP_BASE_API: string;
+  readonly VITE_APP_BASE_API: string;
 }
 
 interface ImportMeta {
