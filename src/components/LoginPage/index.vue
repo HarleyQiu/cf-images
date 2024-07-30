@@ -2,17 +2,21 @@
 import api from '@/api/auth'
 import { ref } from 'vue'
 import { useAuthStore } from '@/stores/auth'
+import { useRouter, useRoute } from 'vue-router'
 
 const authStore = useAuthStore()
+const router = useRouter() // 获取 router 实例
+const route = useRoute() // 获取当前路由对象
+
 let loginForm = ref({
   username: '',
   password: ''
 })
 
 const login = async () => {
-  console.log(loginForm.value)
-  let data: any = await api.login(loginForm.value)
+  const data: any = await api.login(loginForm.value)
   authStore.setToken(data.token)
+  await router.push((route.query.redirect as string) || '/')
 }
 </script>
 
