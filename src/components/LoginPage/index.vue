@@ -1,5 +1,19 @@
 <script setup lang="ts">
+import api from '@/api/auth'
+import { ref } from 'vue'
+import { useAuthStore } from '@/stores/auth'
 
+const authStore = useAuthStore()
+let loginForm = ref({
+  username: '',
+  password: ''
+})
+
+const login = async () => {
+  console.log(loginForm.value)
+  let data: any = await api.login(loginForm.value)
+  authStore.setToken(data.token)
+}
 </script>
 
 <template>
@@ -29,6 +43,7 @@
               type="email"
               name="email"
               placeholder="you@example.com"
+              v-model="loginForm.username"
             />
           </div>
         </div>
@@ -52,12 +67,14 @@
               placeholder="Enter your password"
               type="password"
               name="password"
+              v-model="loginForm.password"
             />
           </div>
         </div>
         <div>
           <button
             type="submit"
+            @click.prevent="login()"
             class="flex w-full justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
             登录
           </button>

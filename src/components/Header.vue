@@ -4,9 +4,6 @@ import { useAuthStore } from '@/stores/auth'
 
 const authStore = useAuthStore()
 
-const login = () => {
-  authStore.setToken('YOUR-USER-TOKEN')
-}
 const logout = () => {
   authStore.clearToken()
 }
@@ -42,8 +39,7 @@ const logout = () => {
       <router-link to="/upload" class="text-sm font-medium hover:underline underline-offset-4" href="#">
         上传
       </router-link>
-      <router-link @click="login"
-                   to="/login"
+      <router-link to="/login"
                    class="text-sm font-medium hover:underline underline-offset-4" href="#"
                    v-if="!authStore.isAuthenticated">
         登录
