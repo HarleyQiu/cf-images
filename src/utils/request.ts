@@ -1,6 +1,7 @@
 // src/utils/request.ts
 import axios from 'axios'
 import type { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from 'axios'
+import { useAuthStore } from '@/stores/auth'
 
 // 创建axios实例
 const service: AxiosInstance = axios.create({
@@ -14,10 +15,11 @@ const service: AxiosInstance = axios.create({
 // 请求拦截器
 service.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
+    const authStore = useAuthStore()
     // 例如添加token到请求头
-    // if (store.getters.token) {
-    //   config.headers['X-Token'] = store.getters.token
-    // }
+    if (authStore.token) {
+      config.headers['Authorization'] = `Bearer ${authStore.token}`
+    }
     return config
   },
   (error: any) => {
@@ -40,13 +42,11 @@ service.interceptors.response.use(
       //   duration: 5 * 1000
       // });
 
-      // 假设 50008: 非法Token; 50012: 其他客户端登录; 50014: Token过期;
-      // if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-      //   // 重新登录
-      //   store.dispatch('user/resetToken').then(() => {
-      //     location.reload();
-      //   });
+      // 假设 401: 非法Token;
+      // if (response.status === 401) {
+      //   return Promise.reject(new Error(response.data))
       // }
+
       return Promise.reject(new Error(res.error || 'Error'))
     } else {
       return res
